@@ -1,14 +1,14 @@
-#MMED Fall 2020 Final Integrated Project
+# MMED Fall 2020 Final Integrated Project
 
 A three page website on a topic of my choice. For this assignment I created a fitness/apparel brand called "Wu-Wei" and created three pages for their website. These include a shopping page, a fitness page and a Contact form.
 
-#Instructions for download
+# Instructions for download
 
 1. Click on the link to the repository to navigate to the repository page on github.
 2. Copy the link provided in github and download the project on your computer using the git clone command on terminal.
 3. Click on any one of the three HTML folders to view the project in the web.
 
-#MIT License
+# MIT License
 
 Copyright 2020 Fateh Rai
 
