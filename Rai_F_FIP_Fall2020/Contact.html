@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wou-Wei Apparel</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+    <section id="topBar"></section><!--end topBar-->
+    <div id="siteContainer">
+        <header id="mainHeader">
+            <div id="logoHeader">
+                <img src="images/FIP_Logo.svg" alt="Wu-Wei Logo" width="240" height="120" id="logo">
+            </div><!--end logo-->
+            <nav id="mainNav">
+                <h2 class="hidden">Main Navigation</h2>
+                    <ul>
+                        <li class="selected"><a href="Shop.html">SHOP</a></li>
+                        <li><a href="Fitness.html">FITNESS</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="Contact.html">CONTACT</a></li>
+                    </ul>
+            </nav><!--end mainNav-->
+        </header><!--end mainHeader-->
+    
+        <main id="mainContact"> <!--start mainContact-->
+                    <h2>CONTACT US</h2>
+            <section id="contactArea"><!--start contactArea-->
+                <h2 class="hidden">Contact form</h2>
+                <p id="contactText">For more information regarding our various services and or workshops please reach out by filling out the form below.</p> 
+            <form id="contactForm" action="form.php" method="post">
+                    <label for="name">Name: (required)</label>
+                    <input type="text" required id="name" name="fullName" size="30" placeholder="Enter your name">
+                    
+                    <label for="email">Email: (will not be published)</label>
+                    <input type="email" required id="email" size="30" placeholder="Enter your Email">
+                    
+                    
+                    <label for="phone">Phone: (required)</label>
+                    <input type="tel" required id="phone" size="30" placeholder="Enter Phone Number">
+                    
+                    <label for="comments">Comments:</label>
+                    <textarea name="comments" id="comments" required cols="50" rows="8"></textarea>
+                    
+                    <label for="human">What is 5 + 4?</label>
+                    <input type="text" required id="human" size="30" placeholder="What is 5 + 4?">
+                   
+                    <input id="submit" type="submit" value="Submit">
+            </form>
+        </section><!--end contactArea--> 
+
+          <section id="mapArea"><!--start mapArea-->
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Wou-Wei Apparel </li>
+                    <li>London ON, Canada</li>
+                    <li>Phone: 1-800-343-3434</li>
+                    <li>Fax: 1-800-Wei</li>
+                </ul> 
+                <section id="Newsletter">
+                <h3 id="newsHeader">Upcoming Events<h3>
+                    <ul>
+                        <li>Beach Yoga Workshop</li>
+                        <img src="images/beach_yoga.jpg" alt="beach_yoga" width="300" height="200" id="Yoga">
+                        <li>Spike Ball Tournament</li>
+                        <img src="images/spike_ball.jpg" alt="spike_ball" width="300" height="200" id="Spike Ball">
+                        <li>Basketball Skills Workshop</li>
+                        <img src="images/bball.jpg" alt="Basketball" width="300" height="200" id="Basketball">
+                    </ul>
+                </section>   
+            </section>
+            
+        </main><!--end mainContact-->
+        
+        <footer id="mainFooter">
+            <div id="footerNav">
+                <nav id="footerNav">
+                <h2 class="hidden">Footer Navigation</h2>
+                    <ul>
+                        <li class="selected"><a href="#">SHOP</a></li>
+                        <li><a href="#">FITNESS</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+            </nav>
+            </div><!--end FooterNav-->
+            <div id="copyRight"><p>Copyright 2020</p></div><!--end Copyright-->
+        </footer><!--end mainFooter-->
+    </div><!--end siteContainer-->
+<script src="js/main.js"></script>    
+</body>
+</html>

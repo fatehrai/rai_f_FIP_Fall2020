@@ -1,0 +1,684 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule, this is only for demo purposes to make the boxes black with white text
+The line height on the <p> tag gives each box a height value*/
+
+p
+{
+	color: #fff;
+	line-height: 100px;
+/*	background: #000;*/
+	text-align: center;
+	margin: 0;
+}
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none; 	
+}
+
+a:hover, a:active 
+{ 
+	text-decoration:none; 
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*section is block level and no width specidied therefore stretches full screen*/
+#topBar
+{
+	background-color: #e4493b;
+	height: 20px;
+	width: 920px;
+	margin: auto;
+}
+
+
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer 
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*This is a flex container*/
+#mainHeader
+{
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+	/*border-bottom: solid 1px #DDD;*/
+	background-image: linear-gradient(#e4493b,#c44031,#8d2e23,#5d1e17);
+	height: 120px;
+}
+
+/*This is a flex item*/
+#logoHeader
+{
+	width: 200px;
+	margin-left: 15px;
+	margin-top: 0px;
+	top: 5px;
+}
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+#mainNav 
+{
+	margin-left: auto;
+	width: 500px;
+	height: 25px;
+	margin-top: 28px;
+}
+
+#mainNav ul
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+#mainNav ul li
+{
+	font-size: 15px;
+	font-weight: bold;
+	display: inline;
+	margin-left: 25px;
+}
+
+#mainNav ul li a
+{
+	color: #fad999;
+	padding: 5px;
+}
+
+#mainNav ul li a:hover
+{
+	background-color: #fad999;
+	color: #e4493b;
+}
+
+#promo 
+{
+	margin-top: 0px;
+	/*border-bottom: solid 1px #DDD;*/
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+
+#promoImage 
+{
+	display: block;
+	margin-top: 40px;
+	/*border-style: solid;
+	border-width: 5px;
+	border-color: white;
+	padding-right: 0px;
+	padding-right: 0px;*/
+}
+
+#promoImage
+{
+	display: block;
+}
+
+
+
+#promoText 
+{
+	margin-top: 40px;
+	margin-left: auto;
+	width: 280px;
+	height: 250px;
+	background-color: white;
+}
+
+#clothing
+{
+	border-style: solid;
+	border-width: 5px;
+	border-color: #f9dfd8;
+	box-shadow: .75em .75em 1em;
+}
+
+#textTitle
+{
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	color: #e34921;
+	font-size: 15.5px;
+	margin-bottom: 0px;
+}
+
+#promoText p
+{
+	margin-left: 8px;
+	line-height: 20px;
+	text-align: left;
+	margin-right: 8px;
+	color: black;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+#promoText
+{
+	border-style: solid;
+	border-width: 5px;
+	border-color: #f9dfd8;
+	box-shadow: .75em .75em 1em;
+}
+
+#productInfo 
+{
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	margin: 0 auto;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23ff9389' fill-opacity='0.4' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#productTitle
+{
+	text-align: center;
+	font-weight: bold;
+	color: #fad999;
+	font-size: 22px;
+	margin-bottom: 15px;
+	margin-top: 30px;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#addBut
+{
+	display: block;
+	width: 100px;
+	background-color: #e4493b;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+#addBut:hover
+{
+	background-color: #c43d30;
+}
+
+#savings
+{
+	position: absolute;
+	background-color: red;
+	font-size: 25px;
+	width: 190px;
+	height: 30px;
+	text-align: center;
+	background-color: #fad999;
+	opacity: 70%;
+	bottom: 0%;
+	padding-left: 20px;
+}
+
+#newArrivals
+{
+	position: absolute;
+	font-size: 25px;
+	width: 190px;
+	height: 30px;
+	text-align: center;
+	background-color: #fad999;
+	opacity: 80%;
+	padding-left: 18px;
+}
+
+#mainFooter 
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+#footerNav 
+{
+	width: 500px;
+}
+
+#copyRight 
+{
+	margin-left: auto;
+	width: 310px;
+}
+
+/*Fitness Page*/
+
+#contentCon 
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+  	height: 680px;
+}
+
+#contentCon p 
+{
+	line-height: 21px;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: black;
+}
+
+#content1 
+{
+	width: 440px;
+	background-color: none;
+	background-color: #f4d2b4;
+	border-style: inset;
+	border-width: 10px;
+	border-color: #fad999;
+}
+
+#blogTitle
+{
+	color: black;
+	font-size: 25px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+#blog_image
+{
+	margin-left: 10px;
+}
+
+#blog_image
+{
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 0px;
+}
+
+#content2 
+{
+	margin-left: auto;
+	width: 440px;
+	background: url(../images/fitness-right.jpg) no-repeat bottom;
+	background-color: #e4493b;
+	border-style: inset;
+	border-color: white
+	border-width: 5px;
+	margin-bottom: 0px;
+	box-shadow: .75em .75em 1em;
+}
+
+#tipsTitle
+{
+	text-align: center;
+	font-size: 30px;
+	margin-top: 2px;
+	margin-left: 10px;
+	margin-bottom: 0px;
+	color: #fad999;
+	font font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+	background-color: #e4493b;
+}
+
+#fitnessEd 
+{
+	display: block;
+	width: 403px;
+	background-color: #e4493b;
+	padding: 18px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 0px;
+	color: #fad999;
+}
+
+#fitnessEd:hover
+{
+	background-color: #fad999;
+	color: #e4493b;
+}
+
+#tipsSub
+{
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+	line-height: 80px;
+	font-size: 25px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #e4493b;
+	color: #fad999;
+	padding-top: 8.5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 13px;
+	margin-top: 0px;
+	text-shadow: 2px 2px 4px #000000;
+	opacity: 70%;
+}
+
+
+
+/*Page 3*/
+
+#productImages 
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+}
+
+/*Get rid of this, here just to give different height*/
+#productImages p
+{
+	line-height: 250px;
+}
+
+.productImg 
+{
+	width: 280px;
+}
+
+
+#contentAreaBig
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #DDD;
+	padding-bottom: 40px;
+}
+
+/*Get rid of this, here just to give different height*/
+#contentAreaBig p 
+{
+	line-height: 300px;
+}
+
+#promoImageBig
+{
+	width: 920px;
+}
+
+
+/*Page 4*/
+
+.productDescLargeLeft 
+{
+	width: 410px;
+}
+
+.productDescLargeRight 
+{
+	width: 410px;
+}
+
+#footerNav 
+{
+	margin-right: auto;
+	width: 500px;
+	height: 25px;
+	margin-top: 40px;
+}
+
+#footerNav ul
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+#footerNav ul li
+{
+	font-size: 15px;
+	font-weight: bold;
+	display: inline;
+	margin-left: 25px;
+}
+
+#footerNav ul li a
+{
+	color: #fad999;
+	padding: 5px;
+}
+
+#footerNav ul li a:hover
+{
+	background-color: #fad999;
+	color: #e4493b;
+}
+
+#copyRight
+{
+	font-weight: bold;
+	color: #fad999;
+	margin-top: 30px;
+}
+
+#mainFooter
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	height: 125px;
+	margin-top: 0px;
+	background-image: linear-gradient(#de4838,#c44031,#8d2e23,#5d1e17);
+	margin-bottom: 0px;
+}
+
+/*Contact Form*/
+
+#mainContact
+{
+	width: 948px;
+	/*padding-top: 20px;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	padding-bottom: 0px;
+}
+
+#mainContact h2
+{
+	font-size: 30px;
+	color: #dc4837;
+	background-color: #f9d6cc;
+	margin-bottom: 40px;
+	width: 920px;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+}
+
+#contactArea
+{
+	width: 460px;
+	border-right: solid 1px #ccc;
+	margin-bottom: 30px;
+}
+
+#mapArea
+{
+	width: 380px;
+	margin-left: 0px;
+	margin-bottom: 30px;
+}
+
+#contactText
+{
+	font-size: 19px;
+	margin-bottom: 30px;
+	width: 430px;
+	padding-top: 170px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: white;
+	font-weight: bold;
+	text-shadow: 2px 2px 4px #000000;
+	line-height: 30px;
+	text-align: left;
+	background: url(../images/contact_img.jpg) no-repeat bottom;
+}
+
+#contactForm
+{
+	font-weight: bold;
+}
+
+#contactForm input
+{
+	border-radius: 5px;
+	border-width: 2px;
+	border-style: inset;
+}
+
+#contactForm textarea
+{
+	border-radius: 5px;
+	border-width: 2px;
+	border-style: inset;
+}
+
+#mapArea
+{
+	width: 460px;
+	height: 600px;
+	margin-bottom: 50px;
+}
+
+#mapArea ul
+{
+	margin-left: 10px;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+#mapArea h3
+{
+	margin-left: 30px;
+	font-size: 20px;
+}
+
+input, textarea
+{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 300px;
+	height: 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	color: #333;
+}
+
+#comments
+{
+	width: 360px;
+	height: 200px;
+}
+
+#submit
+{
+	width: 75px;
+	height: 30px;
+	background-color: #e4493b;
+	color: #fad999;
+	padding: 5px 10px 5px 10px;
+	margin-top: 30px;
+	font-size: 14px;
+}
+
+#Newsletter
+{
+	width: 455px;
+	background-color: #f9d6cc;
+	color: #dc4837;
+	padding: 1px 0px 20px 0px;
+}
+
+#Newsletter li
+{
+	line-height: 40px;
+	list-style-type: none;
+	font-size: 18px;
+	color: #ffcf73;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#Newsletter img
+{
+	border-style: solid;
+	border-width: 3px;
+	border-color: #fad999;
+	box-shadow: .75em .75em 1em;
+
+
+
+
+
+
